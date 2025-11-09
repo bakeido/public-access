@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bakeido | Eggless Gourmet Bakery Menu</title>
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+  <meta http-equiv="Pragma" content="no-cache" />
+  <meta http-equiv="Expires" content="0" />
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+    html, body {
+      height: 100%;
+      margin: 0;
+      background: linear-gradient(160deg, #fff8f3 0%, #ffe5d4 100%);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      font-family: "Poppins", sans-serif;
+      color: #5a4033;
+      overflow: hidden;
+    }
+
+    .logo {
+      font-size: 1.6rem;
+      font-weight: 600;
+      color: #a8653c;
+      letter-spacing: 1px;
+    }
+
+    .sub {
+      font-size: 0.95rem;
+      margin-bottom: 1.5rem;
+      opacity: 0.8;
+    }
+
+    .loader {
+      position: relative;
+      width: 50px;
+      height: 50px;
+      border: 5px solid rgba(255, 195, 160, 0.3);
+      border-top-color: #a8653c;
+      border-radius: 50%;
+      animation: spin 1.2s linear infinite;
+    }
+
+    @keyframes spin {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
+    }
+
+    .text {
+      margin-top: 1.5rem;
+      font-size: 1rem;
+      opacity: 0.8;
+      text-align: center;
+    }
+
+    footer {
+      position: absolute;
+      bottom: 20px;
+      font-size: 0.8rem;
+      color: #a8653c;
+      opacity: 0.6;
+    }
+  </style>
+</head>
+<body>
+  <div class="logo">Bakeido</div>
+  <div class="sub">Eggless Gourmet Bakery</div>
+  <div class="loader"></div>
+  <div class="text">Loading the latest menu for you 🍮</div>
+  <footer>© Bakeido | Indirapuram, Ghaziabad</footer>
+
+  <script>
+    // 💾 Update only this line when you upload a new file
+    const latestPDF = "MenuMainPage.pdf";
+
+    // Add a tiny delay for the animation to show (optional)
+    setTimeout(() => {
+      window.location.href = latestPDF + "?v=" + new Date().getTime();
+    }, 1500);
+  </script>
+</body>
+</html>
