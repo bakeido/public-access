@@ -24,26 +24,27 @@
     }
 
     .logo {
-      font-size: 1.6rem;
-      font-weight: 600;
-      color: #a8653c;
-      letter-spacing: 1px;
+      width: 220px;
+      max-width: 70%;
+      animation: float 3s ease-in-out infinite;
+      margin-bottom: 1rem;
     }
 
-    .sub {
-      font-size: 0.95rem;
-      margin-bottom: 1.5rem;
-      opacity: 0.8;
+    @keyframes float {
+      0% { transform: translateY(0px); }
+      50% { transform: translateY(-10px); }
+      100% { transform: translateY(0px); }
     }
 
     .loader {
       position: relative;
-      width: 50px;
-      height: 50px;
+      width: 55px;
+      height: 55px;
       border: 5px solid rgba(255, 195, 160, 0.3);
       border-top-color: #a8653c;
       border-radius: 50%;
       animation: spin 1.2s linear infinite;
+      margin: 20px 0;
     }
 
     @keyframes spin {
@@ -52,10 +53,10 @@
     }
 
     .text {
-      margin-top: 1.5rem;
       font-size: 1rem;
       opacity: 0.8;
       text-align: center;
+      margin-bottom: 1.5rem;
     }
 
     footer {
@@ -68,17 +69,16 @@
   </style>
 </head>
 <body>
-  <div class="logo">Bakeido</div>
-  <div class="sub">Eggless Gourmet Bakery</div>
+  <img src="LogoSingle_Fullcolor.png" alt="Bakeido Logo" class="logo">
+  <div class="text">Loading the latest Bakeido menu 🍮</div>
   <div class="loader"></div>
-  <div class="text">Loading the latest menu for you 🍮</div>
   <footer>© Bakeido | Indirapuram, Ghaziabad</footer>
 
   <script>
-    // 💾 Update only this line when you upload a new file
+    // 💾 Update only this line each time you upload a new file
     const latestPDF = "MenuMainPage.pdf";
 
-    // Add a tiny delay for the animation to show (optional)
+    // Wait a moment for the animation, then redirect
     setTimeout(() => {
       window.location.href = latestPDF + "?v=" + new Date().getTime();
     }, 1500);
