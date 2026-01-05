@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bakeido | Eggless Gourmet Bakery Menu</title>
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+  <meta http-equiv="Pragma" content="no-cache" />
+  <meta http-equiv="Expires" content="0" />
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+    html, body {
+      height: 100%;
+      margin: 0;
+      background: linear-gradient(198deg, #f3fbff 0%, #d9dafc 100%);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      font-family: "Poppins", sans-serif;
+      color: #5a4033;
+      overflow: hidden;
+    }
+
+    .logo {
+      width: 220px;
+      max-width: 70%;
+      animation: float 3s ease-in-out infinite;
+      margin-bottom: 1rem;
+    }
+
+    @keyframes float {
+      0% { transform: translateY(0px); }
+      50% { transform: translateY(-10px); }
+      100% { transform: translateY(0px); }
+    }
+
+    .loader {
+      position: relative;
+      width: 55px;
+      height: 55px;
+      border: 5px solid rgba(255, 195, 160, 0.3);
+      border-top-color: #a8653c;
+      border-radius: 50%;
+      animation: spin 1.2s linear infinite;
+      margin: 20px 0;
+    }
+
+    @keyframes spin {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
+    }
+
+    .text {
+      font-size: 1rem;
+      opacity: 0.8;
+      text-align: center;
+      margin-bottom: 1.5rem;
+    }
+
+    footer {
+      position: absolute;
+      bottom: 20px;
+      font-size: 0.8rem;
+      color: #a8653c;
+      opacity: 0.6;
+    }
+  </style>
+</head>
+<body>
+  <img src="LogoSingle_Fullcolor.png" alt="Bakeido Logo" class="logo">
+  <div class="text">Loading Terms and Conditions Page 🍮</div>
+  <div class="loader"></div>
+  <footer>© Bakeido | Indirapuram, Ghaziabad</footer>
+
+  <script>
+    // 💾 Update only this line each time you upload a new file
+    const latestPDF = "MenuMainPage_1.pdf";
+
+    // Wait a moment for the animation, then redirect
+    setTimeout(() => {
+      window.location.href = latestPDF + "?v=" + new Date().getTime();
+    }, 500);
+  </script>
+</body>
+</html>
